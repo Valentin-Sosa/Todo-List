@@ -140,13 +140,14 @@ header > button:hover,
     position: absolute;
     right: 2vw;
     top: 20vh;
-    background-color: #09090b;
-    padding: 3vh 3vw;
+    background-color: #18181b;
+    padding: 3vh 2vw;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     gap: 2vh;
     font-size: 1.3rem;
+    box-shadow: 3px 3px 1rem black;
     z-index: 2;
 }
 
