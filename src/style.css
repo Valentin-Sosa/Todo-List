@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+body
+{
+    background-color: #18181b;
+    height: 100vh;
+}
+
+body > header
+{
+    background-color: #09090b;
+    height: 15vh;
+    padding: 3vh 5vw;
+    font-size: 2rem;
+}
+
+main
+{
+    display: grid;
+    height: 85vh;
+    grid-template-columns: 1fr 4fr;
+}
+
+nav
+{
+    background-color: #09090b;
+
+    display: flex;
+    flex-direction: column;
+    padding: 3vh 3vw;
+    gap: 4vh;
+}
+
+nav > section
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+nav > section > button
+{
+    opacity: .6;
+}
+
+nav > section > button:hover,
+.active
+{
+    opacity: 1;
+}
+
+nav > section > h2
+{
+    font-size: 2rem;
+}
+
+li 
+{
+    padding-left: 2vw;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    font-weight: 400;
+    opacity: .6;
+}
+
+li:hover
+{
+    opacity: 1;
+}
+
+li > button
+{
+    opacity: .4;
+}
+
+li > button:hover
+{
+    opacity: 1;
+}
+
+
+main > section
+{
+    padding: 4vh 3vw;
+    box-shadow: -5px -5px 1rem black;
+}
+
+#task
+{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+#task > section
+{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+#task > section > header > h2
+{
+    font-size: 3rem;
+}
+
+#task > section > header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > button,
+.menu > button
+{
+    opacity: .4;
+}
+
+header > button:hover,
+.menu > button:hover
+{
+    opacity: 1;
+}
+
+.menu
+{
+    position: absolute;
+    right: 2vw;
+    top: 20vh;
+    background-color: #09090b;
+    padding: 3vh 3vw;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    font-size: 1.3rem;
+    z-index: 2;
+}
+
+.menu > ul
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7vh;
+}
+
+.menu > ul > li
+{
+    font-size: 1.1rem;
+}
+
+.task-container
+{
+    padding: 1vh 1vw;
+    display: flex;
+    justify-content: space-between;
+    gap: 4vw;
+    border-radius: 0.5rem;
+}
+
+.task-container:hover
+{
+    box-shadow: 3px 3px 1rem black;
+}
+
+.task-container.l
+{
+    border: #15803d solid 3px;
+    border-left: #15803d solid 15px;
+}
+
+.task-container.m
+{
+    border: #f59e0b solid 3px;
+    border-left: #f59e0b solid 15px;
+}
+
+.task-container.h
+{
+    border: #991b1b solid 3px;
+    border-left: #991b1b solid 15px;
+}
+
+.end-container
+{
+    display: flex;
+    gap: 4vw;
+    align-items: center;
+}
+
+.task-date
+{
+    width: 70px;
+}
+
+.buttons-container
+{
+    display: flex;
+    gap: 1vw;
+}
+
+.buttons-container > button
+{
+    opacity: .4;
+}
+
+.buttons-container > button:hover
+{
+    opacity: 1;
+}
+
+
+.info-container
+{
+    display: grid;
+    grid-template-columns: 1fr 30fr ;
+    column-gap: 2vh;
+    align-items: center;
+}
+
+input[type="checkbox"]
+{
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+input[type="checkbox"]:checked~.task-name
+{
+    text-decoration:line-through;
+    color: #6b7280;
+}
+
+.task-name
+{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.info-container > p
+{
+    grid-area: 2 / 2 / 3 / 3;
+    font-size: 0.7rem;
+    color: #6b7280;
+}
+
+button
+{
+    border: none;
+    background: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: left;
+    display: flex;
+    gap: 0.5vw;
+    align-items: center;
+    outline: 0;
+}
+
+button > span
+{
+    font-size: 2.2rem ;
+    align-self: flex-end;
+}
+
+img
+{
+    filter: invert(100%);
+    height: 20px;
+    width: 20px;
+    color: #fff;
+}
+
+/* MODALS STYLE */
+
+dialog
+{
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1em black;
+    padding: 2vh 3vw;
+}
+
+dialog > form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+form > div
+{
+    margin: 1vh 0;
+    display: flex;
+    color: #000;
+    font-weight: 450;
+    align-items: center;
+    gap: 1vw;
+}
+
+
+.low > .checkmark
+{
+    padding: 0.5vh 1vw;
+    border: #15803d solid 2px;
+    color: #15803d;
+    font-weight: bold;
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.low:hover input~.checkmark, 
+.low input:checked~.checkmark 
+{
+    background-color: #15803d;
+    color: #fff;
+}
+
+.medium >.checkmark
+{
+    padding: 0.5vh 1vw;
+    border: #f59e0b solid 2px;
+    color: #f59e0b;
+    font-weight: bold;
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.medium:hover input~.checkmark, 
+.medium input:checked~.checkmark 
+{
+    background-color: #f59e0b;
+    color: #fff;
+}
+
+.high>.checkmark
+{
+    padding: 0.5vh 1vw;
+    border: #991b1b solid 2px;
+    color: #991b1b;
+    font-weight: bold;
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.high:hover input~.checkmark, 
+.high input:checked~.checkmark 
+{
+    background-color: #991b1b;
+    color: #fff;
+}
+
+input, label
+{
+    color: #000;
+}
+
+input[type=radio] 
+{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+input[type=text],
+input[type="date"],
+textarea
+{
+    margin-top: 0.5vh;
+    outline: 0;
+    background-color: #e2e8f0;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1vh 1vw;
+}
+
+
+
+input[type=text]
+{
+    height: 4vh;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+textarea
+{
+    height: 15vh;
+    font-size: 0.9rem;
+    color: #000;
+}
+
+input[type="date"]
+{
+    appearance: none;
+    height: 4vh;
+    font-size: 1rem;
+}
+
+label
+{
+    display: flex;
+    flex-direction: column;
+    font-weight: 450;
+}
+
+.button-section
+{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2vh;
+}
+
+button[type="submit"]
+{
+    background-color: #15803d;
+    padding: 0.5vh 1vw;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 1.15rem;
+    border: #15803d solid 2px;
+}
+
+button[type="submit"]:hover
+{
+    background-color: #fff;
+    color: #15803d;
+}
+
+
+button[type="button"]
+{
+    background-color: #dc2626;
+    padding: 0.5vh 1vw;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 1.15rem;
+    border: #dc2626 solid 2px;
+}
+
+button[type="button"]:hover
+{
+    background-color: #fff;
+    color: #dc2626;
+}
+
+dialog::backdrop 
+{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#task-modal, 
+#edit-modal
+{
+    margin: auto auto;
+    height: 52vh;
+    width: 30vw;
+    max-height: 500px;
+}
+
+#task-modal > form,
+#edit-modal > form
+{
+    height: 40vh;
+}
+
+#project-modal
+{
+    margin: auto auto;
+    height: 30vh;
+    max-height: 500px;
+}
+
+#project-modal > form > button,
+#date-modal > form > button,
+#priority-modal > form > button
+{
+    display: flex;
+    justify-content: center;
+}
+
+#date-modal,
+#priority-modal
+{
+    margin: auto auto;
+}
+
+#priority-modal > form
+{
+    color: #000;
+    font-weight: 450;
+    font-size: 1.4rem;
+}
+

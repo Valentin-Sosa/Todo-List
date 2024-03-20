@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+</head>
+<body>
+    <header>
+        <h1>Task Manager</h1>
+    </header>
+    <main>
+        <dialog id="priority-modal">
+            <form action="" method="dialog">
+                Edit your task priority:
+                <div>
+                    <label for="low-edit" class="low">
+                        <input type="radio" id="low-edit" name="priority">
+                        <span class="checkmark">Low</span>
+                     </label>
+                     <label for="medium-edit" class="medium">
+                         <input type="radio" id="medium-edit" name="priority">
+                         <span class="checkmark">Medium</span>
+                      </label>
+                      <label for="high-edit" class="high">
+                         <input type="radio" id="high-edit" name="priority">
+                         <span class="checkmark">High</span>
+                      </label>
+                </div>
+                <button type="button" id="cancel-priority">Cancel</button>
+                <button type="submit">Save</button>                
+            </form>
+        </dialog>
+        <dialog id="date-modal">
+            <form action="" method="dialog">
+                <label for="edit-date">
+                    Edit your due date:
+                    <input type="date" id="edit-date">
+                </label>
+                <button type="button" id="cancel-date">Cancel</button>
+                <button type="submit">Save</button>
+            </form>
+        </dialog>
+        <dialog id="project-modal">
+            <form action="" method="dialog">
+                <h2>Add project</h2>
+                <label for="project-name">
+                    Name:
+                    <input id="project-name" type="text" required>
+                </label>
+                <button type="button" id="cancel-project">Cancel</button>
+                <button type="submit">Add</button>
+            </form>
+        </dialog>
+        <dialog id="task-modal">
+            <form action="" method="dialog">
+                <label for="task-title">
+                    Title:
+                    <input type="text" id="task-title" required>
+                </label>
+                <label for="task-description">
+                    Description of the task:
+                    <textarea  id="task-description" cols="30" rows="10" maxlength="1000"></textarea>
+                </label>
+                <label for="task-due-date">
+                    Due Date:
+                    <input type="date" id="task-due-date" required>
+                </label>
+                <div>
+                    Priority:
+                    <label for="low-priority"  class="low">
+                        <input type="radio" id="low-priority" name="priority" required>
+                        <span class="checkmark">Low</span>
+                     </label>
+                     <label for="medium-priority" class="medium">
+                         <input type="radio" id="medium-priority" name="priority" required>
+                         <span class="checkmark">Medium</span>
+                      </label>
+                      <label for="high-priority" class="high">
+                         <input type="radio" id="high-priority" name="priority" required>
+                         <span class="checkmark">High</span>
+                      </label>
+                </div>
+                <div class="button-section">
+                    <button type="button" id="cancel-task">Cancel</button>
+                    <button type="submit">Add</button>
+                </div>
+    
+            </form>
+        </dialog>
+        <dialog id="edit-modal">
+            <form action="" method="dialog" id="edit-form">
+                <label for="edit-title">
+                    Title:
+                    <input type="text" id="edit-title">
+                </label>
+                <label for="edit-description">
+                    Description of the task:
+                    <textarea  id="edit-description" cols="30" rows="10" maxlength="1000"></textarea>
+                </label>
+                <label for="edit-due-date">
+                    <input type="date" id="edit-due-date">
+                </label>
+                <div>
+                    Priority:
+                    <label for="edit-low-priority" class="low">
+                        <input type="radio" id="edit-low-priority" name="priority">
+                        <span class="checkmark">Low</span>
+                     </label>
+                     <label for="edit-medium-priority" class="medium">
+                         <input type="radio" id="edit-medium-priority" name="priority">
+                         <span class="checkmark">Medium</span>
+                      </label>
+                      <label for="edit-high-priority" class="high">
+                         <input type="radio" id="edit-high-priority" name="priority">
+                         <span class="checkmark">High</span>
+                      </label>
+                </div>
+                <div class="button-section">
+                    <button type="button" id="cancel-edit">Cancel</button>
+                    <button type="submit">Save</button>
+                </div>
+              
+            </form>
+        </dialog>
+        <nav>
+            <section id="general">
+                <button id="inbox-btn"> <img src="images/inbox.png"> Inbox</button>
+                <button id="today-btn"> <img src="images/today.png"> Today</button>
+                <button id="week-btn"> <img src="images/week.png"> This Week</button>
+                <button id="overdue-btn"> <img src="images/overdue.png"> Overdue</button>
+            </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <ul id="projects-list"></ul>
+                <button id="add-project"><span class="plus">+</span> Add Project</button>
+            </section>
+        </nav>
+        <section>
+            <section id="task">
+            </section>
+        </section>
+    </main>
+</body>
+</html>
